@@ -1,0 +1,232 @@
+{% extends 'glasgowclubnights/main_base.html' %}
+{% load staticfiles %}
+{% block body_block %}
+
+        <header class="masthead">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+
+                    <div class="col-md-6">
+                        <p style="text-align: center;"><img src="{{ MEDIA_URL }}lacheetahlogo.png" class="img-rectangle"
+                                                            class="img-responsive" alt="lacheetahlogo" width="220" height="220"></p>
+                    </div>
+
+                    <div class="col-md-3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p style="text-align: center;"><a href="https://www.facebook.com/lacheetahclub/"
+                                                          class="btn btn-default btn-lg"><i
+                                class="fa fa-facebook"> <span
+                                class="network-name">Facebook</span></i></a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p style="text-align: center;"><a href="https://twitter.com/lacheetahclub?lang=en"
+                                                          class="btn btn-default btn-lg"><i
+                                class="fa fa-twitter"> <span
+                                class="network-name">Twitter</span></i></a>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <p style="text-align: center;"><a href="https://www.instagram.com/lacheetahclub/"
+                                                          class="btn btn-default btn-lg"><i
+                                class="fa fa-instagram"> <span
+                                class="network-name">Instagram</span></i></a>
+                    </div>
+                    <p></p>
+
+                </div>
+
+            </div>
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="thumbnail">
+                            <img src="{{ MEDIA_URL }}lacheetah.jpg" alt="La Cheetah" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="row">
+
+                            <div class="col-md-6">
+                                <h1 style="color: white;"> LaCheetah Night Club</h1>
+                                <h4 style="color: white;">>
+                                   Named after a famous New York salsa club, La Cheetah Club is situated in the basement of Max's Bar on Queen Street in Glasgows' City Centre.
+                                </h4>
+                                <h4 style="color: white;">>
+                                    The club consists of an isolated DJ booth, Funktion One soundsystem, lighting desk, small cloak room and bar.
+                                </h4>
+                                <h4 style="color: white;">>
+                                   The aim of club space is to offer the opportunity to see some of the most exciting names in electronic music along side local talent in an especially intimate environment,
+                                    with great sound and an inclusive atmosphere.
+                                </h4>
+
+
+                                <button type="button" class="btn btn-info btn-lg" id="hoursbutton">
+                                    Opening Hours
+                                </button>
+
+                                <div class="modal" id="myModal">
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">La Cheetah Opening Hours</h4>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <p>Weekly</p>
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Day</th>
+                                                        <th>Opens at</th>
+                                                        <th>Closes at</th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>Monday</td>
+                                                        <td>11.00pm</td>
+                                                        <td>03.00am</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Tuesday</td>
+                                                        <td>11.00pm</td>
+                                                        <td>03.00am</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Wednesday</td>
+                                                        <td>10.00pm</td>
+                                                        <td>03.00am</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Thursday</td>
+                                                        <td>11.00pm</td>
+                                                        <td>03.00am</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Friday</td>
+                                                        <td>10.00pm</td>
+                                                        <td>03.00am</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Saturday</td>
+                                                        <td>9.00pm</td>
+                                                        <td>03.00am</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sunday</td>
+                                                        <td>11.00pm</td>
+                                                        <td>03.00am</td>
+
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("hoursbutton");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<div class="container">
+            <h2 style="text-align:center; color:white">Club Nights at La Cheetah</h2>
+            <hr>
+            <h5 style="text-align:center; color:white">La Cheetah does not have any specific club nights. Please see above for opening hours and social media for upcoming events. </h5>
+        </div>
+
+        <div class="container">
+            <h2 style="text-align:center; color:white">La Cheetah Reviews</h2>
+            <hr>
+
+
+            <div class="container">
+                <div id="stars" class="starrr">
+                    <div class="row">
+                        <table class="table table-condensed" style="color: white">
+                            <thead>
+                            <tr>
+                                <th> Username</th>
+                                <th> Club</th>
+                                <th> Rating</th>
+                            </tr>
+                            </thead>
+                            {% for review in club_name %}
+                                <tbody>
+
+                                <td> {{ review.name }} </td>
+                                <td> {{ review.club_list }} </td>
+                                <td>{{ review.club_rating }}</td>
+                                </tbody>
+                            {% endfor %}
+
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        </header>
+
+    </div>
+    <div class=container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4478.383611572899!2d-4.257606775056638!3d55.85933851205186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4888469f7a11e4ab%3A0xdcdc027b5e01dc90!2sLa+Cheetah+Club!5e0!3m2!1sen!2suk!4v1520428039891"
+                width="100%;" height="50%;" frameborder="0" style="position:absolute;" allowfullscreen></iframe>
+    </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,70 @@
+<!-- Php to send information to to relevant email address -->
+<?php
+if($_POST["message"]) {
+    mail("gregor.kerr.glasgow@gmail.com", "Form to email message", $_POST["message"], "From: an@email.address");
+}
+?>
+
+{% extends 'glasgowclubnights/main_base.html' %}
+
+{% block body_block %}
+
+<!-- Defines and formats form to leave a message along with user details -->
+    <section id="background">
+        <header class="mastheadContact">
+            <section id="contact" class="content-section text-center">
+                <div class="contact-section">
+                    <div class="container">
+                        <h2>Contact Us</h2>
+                        <p>Feel free to shout us by feeling the contact form or visiting our social network sites like
+                            Fackebook,YouTube,Twitter.</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <form class="form-horizontal" action="/gcn/"
+                                      form method="post" enctype="text/plain">
+
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="exampleInputName2">Name</label>
+                                        <input type="text" class="form-control" id="name"
+                                               placeholder="Jane Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail2">Email</label>
+                                        <input type="email" class="form-control" id="email"
+                                               placeholder="jane.doe@example.com">
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="exampleInputText">Your Message</label>
+                                        <textarea id="message" class="form-control" placeholder="Description"></textarea>
+                                    </div>
+
+                                </form>
+                                <button type="submit" onclick="submit()">Send Message</button>
+                                <hr>
+                                <!-- links to our relevant social medias -->
+                                <h3>Our Social Sites</h3>
+                                <ul class="list-inline banner-social-buttons">
+                                    <li><a href="https://twitter.com/" class="btn btn-default btn-lg"><i class="fa fa-twitter"> <span
+                                            class="network-name">Twitter</span></i></a></li>
+                                    <li><a href="https://www.facebook.com/" class="btn btn-default btn-lg"><i class="fa fa-facebook"> <span
+                                            class="network-name">Facebook</span></i></a></li>
+                                    <li><a href="https://youtu.be/DeumyOzKqgI?t=32s"
+                                           class="btn btn-default btn-lg"><i class="fa fa-youtube-play"> <span
+                                            class="network-name">Youtube</span></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+    </section>
+
+<script>
+    function submit() {
+            window.confirm("Thank you, your form has been sent to us");
+            window.location.href = "/gcn/";
+</script>
+
+{% endblock %}

@@ -1,0 +1,246 @@
+{% extends 'glasgowclubnights/main_base.html' %}
+{% load staticfiles %}
+{% block body_block %}
+
+<!-- header to hold club logo image -->
+        <header class="masthead">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+
+                    <div class="col-md-6">
+                        <p style="text-align: center;"><img src="{{ MEDIA_URL }}bamboologo.png" class="img-circle"
+                                                            class="img-responsive" alt="Bamboo" width="220px"
+                                                            height="220px"></p>
+                    </div>
+
+                    <div class="col-md-3">
+                    </div>
+                </div>
+            </div>
+<!-- Social Media Links -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p style="text-align: center;"><a href="https://www.facebook.com/BambooGlasgow/"
+                                                          class="btn btn-default btn-lg"><i
+                                class="fa fa-facebook"> <span
+                                class="network-name">Facebook</span></i></a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p style="text-align: center;"><a href="https://twitter.com/BambooGlasgow"
+                                                          class="btn btn-default btn-lg"><i
+                                class="fa fa-twitter"> <span
+                                class="network-name">Twitter</span></i></a>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <p style="text-align: center;"><a href="https://www.instagram.com/bambooglasgow/"
+                                                          class="btn btn-default btn-lg"><i
+                                class="fa fa-instagram"> <span
+                                class="network-name">Instagram</span></i></a>
+                    </div>
+                    <p></p>
+
+                </div>
+
+            </div>
+<!-- Club information and image -->
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="thumbnail">
+                            <img src="{{ MEDIA_URL }}bambooclub.jpg" alt="Bamboo" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="infoBackground">
+                            <div class="col-md-6">
+                                <h1 style="color: white;"> Bamboo Night Club</h1>
+                                <h4 style="color: white;">>
+                                    Come down for the best student Wednesday night in Glasgow!
+
+                                    With drinks from £1 and and free entry for students before Midnight you
+                                    are sure to have a great night.
+                                </h4>
+                                <h4 style="color: white;">>
+                                    Dance your Friday night away and GET LOOSE!
+
+                                    With drinks form £1.50, students going free all night and our resident DJs,
+                                    you will be bouncing from the moment you enter until closing.
+
+
+                                </h4>
+                                <h4 style="color: white;">>
+                                    Ready for the best Sunday night sesh availiable in Glasgow?
+                                    Disco Badger at Bamboo is definitely the one for you.
+
+                                    With drinks from £1.50 and trade/retail staff going for free all night,
+                                    you will be sure to have a great night with everyone else who agrees that Sundays
+                                    are the best days for a night out.
+                                </h4>
+
+
+                                  <button type="button" class="btn btn-info btn-lg" id="hoursbutton">
+                                    Opening Hours
+                                </button>
+
+<!-- Modal to show opening hours -->
+                                <div class="modal" id="myModal">
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Bamboo Opening Hours</h4>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <p>Weekly</p>
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Day</th>
+                                                        <th>Opens at</th>
+                                                        <th>Closes at</th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>Wednesday</td>
+                                                        <td>10.30</td>
+                                                        <td>03.00</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Friday</td>
+                                                        <td>10.30</td>
+                                                        <td>03.00</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Saturday</td>
+                                                        <td>10.30</td>
+                                                        <td>03.00</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sunday</td>
+                                                        <td>10.30</td>
+                                                        <td>03.00</td>
+
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Java script to show modal -->
+            <script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("hoursbutton");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<!-- showing individual nights for the club -->
+            <div class="container">
+                <h2 style="text-align:center; color:white">Club Nights at Bamboo</h2>
+                <hr>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="{{ MEDIA_URL }}wnb.jpg"
+                                 alt="juicy tuesday" width="23%" height="23%">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="{{ MEDIA_URL }}getloose.jpg"
+                                 alt="loco" width="30%" height="30%">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="{{ MEDIA_URL }}discobadger.jpg"
+                                 alt="milk" width="40%" height="40%">
+                        </div>
+                    </div>
+            </div>
+
+        <div class="container">
+            <h2 style="text-align:center; color:white">Bamboo Reviews</h2>
+            <hr>
+
+<!-- space to show ratings -->
+            <div class="container">
+                <div id="stars" class="starrr">
+                    <div class="row">
+                        <table class="table table-condensed" style="color: white">
+                            <thead>
+                            <tr>
+                                <th> Username</th>
+                                <th> Club</th>
+                                <th> Rating</th>
+                            </tr>
+                            </thead>
+                            {% for review in club_name %}
+                                <tbody>
+
+                                <td> {{ review.name }} </td>
+                                <td> {{ review.club_list }} </td>
+                                <td>{{ review.club_rating }}</td>
+                                </tbody>
+                            {% endfor %}
+
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+    </div>
+<!-- Embedded google maps to show location of club -->
+    <div class="container-fluid">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8956.045393835931!2d-4.26235372655214!3d55.862469510398064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488844209a848bd1%3A0x4ee847ffd0fb92f3!2sBamboo!5e0!3m2!1sen!2suk!4v1520427329400"
+                width="100%;" height="50%;" frameborder="0" style="position:absolute;" allowfullscreen></iframe>
+    </div>
+
+
+
+
+{% endblock %}
