@@ -1,7 +1,5 @@
 ---- read me---
 
-To see previous commits visit https://github.com/GregorKerr1996/WebApplication-GlasgowClubNights/. Changed github for final commit
-
 --- Before Running
 
 
